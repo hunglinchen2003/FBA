@@ -1,0 +1,7 @@
+Thumbs.db
+Desktop.ini
+~$*.docx
+*.tmp
+
+# 根目錄原始 Word 與 files/ 內副本重複，僅追蹤 files/ 內檔名
+/*.docx

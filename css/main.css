@@ -1,0 +1,436 @@
+/* 功生聯 — GitHub Pages 靜態站 */
+:root {
+  --bg: #0b1220;
+  --bg-elevated: #111a2e;
+  --surface: #162238;
+  --text: #e8edf7;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-2: #22d3ee;
+  --border: rgba(148, 163, 184, 0.18);
+  --radius: 14px;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  --font-sans: "Noto Sans TC", system-ui, sans-serif;
+  --font-display: "Noto Serif TC", "Noto Sans TC", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 10% -10%, rgba(56, 189, 248, 0.12), transparent 50%),
+    radial-gradient(ellipse 80% 60% at 90% 20%, rgba(34, 211, 238, 0.08), transparent 45%);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(11, 18, 32, 0.82);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  text-decoration: none;
+}
+.brand:hover {
+  text-decoration: none;
+  color: var(--accent-2);
+}
+
+.brand__mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fff;
+  padding: 4px;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.brand__abbr {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 0.92rem;
+  padding: 0.35rem 0;
+  color: var(--muted);
+}
+.nav a:hover {
+  color: var(--accent);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  padding: 2.5rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 320px);
+    align-items: center;
+  }
+}
+
+.hero__badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+  letter-spacing: 0.02em;
+}
+
+.hero__lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 52ch;
+  margin: 0 0 1.5rem;
+}
+
+.hero__names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.hero__names dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin: 0;
+}
+.hero__names dd {
+  margin: 0;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  color: #0b1220;
+}
+.btn--primary:hover {
+  color: #0b1220;
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+.btn--ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.hero__card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.hero__card img {
+  border-radius: 10px;
+  margin: 0 auto 1rem;
+  max-height: 200px;
+  width: auto;
+}
+
+.hero__card-caption {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  margin: 0 0 1rem;
+}
+
+.section p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+  color: var(--accent-2);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  margin: 0 0 0.5rem;
+}
+
+.page-intro {
+  color: var(--muted);
+  margin: 0 0 2rem;
+  max-width: 65ch;
+}
+
+.prose {
+  max-width: 52rem;
+}
+
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 2.25rem 0 0.75rem;
+  color: var(--text);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p,
+.prose li {
+  color: #cbd5e1;
+}
+
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin: 0.35rem 0;
+}
+
+.doc-table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.doc-table th,
+.doc-table td {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.doc-table th {
+  background: var(--surface);
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.doc-table tr:last-child td {
+  border-bottom: none;
+}
+
+.download-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.download-list li {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.contact-box {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-box h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.contact-box p {
+  margin: 0.35rem 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.25rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.site-footer p {
+  margin: 0.35rem 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 0.92rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
