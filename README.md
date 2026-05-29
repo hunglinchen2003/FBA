@@ -1,28 +1,36 @@
-# 功生聯 — 推廣網頁（GitHub Pages）
+# 次世代跨域功能性分子與生化檢測整合技術聯盟
 
-靜態網站：次世代跨域功能性分子與生化檢測整合技術聯盟（功能性分子與生化檢測聯盟 · 功生聯）。
+靜態官網（GitHub Pages 適用），內容依 2026 年組織章程及入會合約書更新。
 
-## 本機預覽
+## 頁面
 
-以瀏覽器開啟專案根目錄的 `index.html`，或使用本機伺服器（例如 `npx serve .`）。
-
-## 發布到 GitHub Pages
-
-1. 在 GitHub 建立新儲存庫，將本資料夾內容推送上去（保留 `index.html` 在根目錄）。
-2. 儲存庫 **Settings → Pages**。
-3. **Source** 選擇 `Deploy from a branch`，**Branch** 選 `main`（或 `master`）且資料夾選 `/ (root)`。
-4. 儲存後數分鐘內可透過 `https://<使用者名稱>.github.io/<儲存庫名稱>/` 存取。
-
-已包含 `.nojekyll`，避免 Jekyll 處理造成路徑問題。
-
-## 檔案說明
-
-| 路徑 | 說明 |
+| 檔案 | 說明 |
 |------|------|
-| `index.html` | 首頁 |
-| `charter.html` | 組織章程（網頁版） |
-| `membership.html` | 入會資訊與下載 |
-| `assets/logo.jpg` | 聯盟標誌 |
-| `files/*.docx` | 章程與會員合約書原始檔 |
+| `index.html` | 首頁：聯盟定位、任務、分組召集人 |
+| `charter.html` | 組織章程全文（含附件） |
+| `membership.html` | 入會資格、會員類別、繳費與下載 |
 
-若更新 Word 原文，請替換 `files/` 內對應檔案，並視需要同步修改 `charter.html` 內文。
+## 可下載文件（`files/`）
+
+- `membership-contract.docx` — 聯盟會員入會合約書
+- `charter.pdf` — 組織章程（鄭偉杰老師 20260511V2）
+
+## 本地預覽
+
+以任意靜態伺服器開啟專案根目錄，例如：
+
+```bash
+python -m http.server 8080
+```
+
+瀏覽 `http://localhost:8080/index.html`。
+
+## 發布至 GitHub Pages
+
+1. 將本資料夾內容推送到 [hunglinchen2003/FBA](https://github.com/hunglinchen2003/FBA) 儲存庫根目錄。
+2. 確認已包含 `.nojekyll`。
+3. 於 GitHub **Settings → Pages** 選擇 `main` 分支、根目錄 `/`。
+
+## 備註
+
+線上 HTML 為方便閱讀之摘要；正式效力以 `files/` 內 Word／PDF 及主管機關核定版本為準。
