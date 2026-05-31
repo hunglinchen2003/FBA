@@ -9,6 +9,7 @@
 | `index.html` | 首頁：聯盟定位、任務、分組召集人 |
 | `charter.html` | 組織章程全文（含附件） |
 | `membership.html` | 入會資格、會員類別、繳費與下載 |
+| `brochure.html` | 會員召募三折頁（可列印／存 PDF） |
 
 ## 可下載文件（`files/`）
 
