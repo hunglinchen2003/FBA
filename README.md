@@ -13,7 +13,8 @@
 
 ## 可下載文件（`files/`）
 
-- `membership-contract.docx` — 聯盟會員入會合約書
+- `membership-contract.docx` — 聯盟會員入會合約書（Word）
+- `membership-contract.pdf` — 聯盟會員入會合約書（PDF）
 - `charter.pdf` — 組織章程（鄭偉杰老師 20260511V2）
 
 ## 本地預覽
